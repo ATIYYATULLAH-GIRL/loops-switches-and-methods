@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loops, Methods And Switches</title>
+    </head>
+    <body>
+        <!--loops-->
+        <h2>Javascript For Loops</h2>
+        <p id="demo"></p>
+        <script>
+            var fruits=["Apple","Coconut","Grapes","Watermelon","Strawberry","Blueberry","Dragon Fruit","Blackcurrant","Blackberry"];
+            var text="";
+            for(var i=0;i<fruits.length;i++){
+                text +=fruits[i] +"<br><br>";
+            }
+            document.getElementById("demo").innerHTML=text;
+        </script>
+
+        <!--methods-->
+        <h2>Javascript String Methods</h2>
+        <p>Basic Methods</p>
+        <script>
+            var str="KaYoSoLa";
+            document.write(str.toUpperCase());
+            document.write("<br><br>");
+            document.write(str.toLowerCase());
+            document.write("<br><br>");
+            document.write(str.startsWith("K")); //true or false
+            document.write("<br><br>");
+
+            var sent="I made different text designs with method"
+            var word=new RegExp("about");
+            var res=word.test(sent);
+            document.write(res); //true or false
+            document.write("<br><br>")
+        </script>
+
+        <!--switches-->
+        <h2>Javascript Switches</h2>
+        <p id="day"></p>
+        <script>
+            var day;
+            switch (new Date().getDay()){
+                case 0:
+                    day ="Sunday";
+                    break;
+                case 1:
+                    day ="Monday";
+                    break;
+                case 2:
+                    day ="Tuesday";
+                    break; 
+                case 3:
+                    day ="Wednesday";
+                    break; 
+                case 4:
+                    day ="Thursday";
+                    break; 
+                case 5:
+                    day ="Friday";
+                    break; 
+                case 6:
+                    day ="Saturday";
+                    break;
+            }
+            document.getElementById("day").innerHTML = "Today is " + day
+        </script>
+    </body>
+</html>
